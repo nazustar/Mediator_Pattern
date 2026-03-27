@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package app;
 
 import components.*;
 
-/**
- *
- * @author MyM
- */
 public class Main {
     public static void main(String[] args) {
         SmartHub hub = new SmartHub();
@@ -19,7 +11,7 @@ public class Main {
         Actuator cooler = new Actuator(hub, "Cooler1");
 
         // Flujo de ejemplo
-        tempSensor.detect("temperature=28");
+        tempSensor.detect("temperature=30");
         // El hub reenvía el mensaje; en un caso real el hub decidiría si enviar CMD a actuadores
         heater.performAction("standby");
         cooler.performAction("start");
