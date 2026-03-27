@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package components;
 
-/**
- *
- * @author MyM
- */
 public class Actuator extends Device {
     public Actuator(Mediator mediator, String id) {
         super(mediator, id);
@@ -16,7 +8,7 @@ public class Actuator extends Device {
     @Override
     public void receive(String message) {
         System.out.println("[Actuator " + id + "] recibió -> " + message);
-        // Ejemplo simple: interpretar mensajes que empiecen con "CMD:"
+
         if (message.startsWith("CMD:")) {
             String cmd = message.substring(4);
             performAction(cmd);
